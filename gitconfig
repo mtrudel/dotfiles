@@ -1,0 +1,49 @@
+[alias]
+  st = status -sb
+  ci = commit
+  co = checkout
+  br = branch
+  ca = commit -av 
+  mg = merge --no-ff
+  lo = log --graph
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  amend = commit --amend
+  tinylog = log --format=oneline --abbrev-commit
+  track = checkout -t 
+  fixup = rebase -i --autosquash --autostash
+  shortref = rev-parse --short HEAD
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[merge]
+  tool = opendiff
+[difftool]
+  prompt = false
+[branch]
+  autosetupmerge = always
+[help]
+  format = web
+  autocorrect = 1
+[advice]
+  statusHints = false
+[web]
+  browser=open
+[diff]
+  tool = vimdiff
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  pager = "less -RX"
+[gist]
+  private = true
+[push]
+  default = current
+  followTags = true
+[rebase]
+  autostash = true
+[remote "origin"]
+  prune = true
+[include]
+  path = .gitconfig.private

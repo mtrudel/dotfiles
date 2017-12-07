@@ -1,0 +1,13 @@
+# Recommended by base asdf install
+brew "autoconf"
+brew "automake"
+brew "coreutils"
+brew "libtool"
+brew "libxslt"
+brew "libyaml"
+brew "openssl"
+brew "readline"
+brew "unixodbc"
+
+# Needed for Erlang observer GUI
+brew "wxmac"

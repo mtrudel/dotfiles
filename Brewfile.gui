@@ -1,0 +1,29 @@
+# Quicklook plugins
+cask "betterzipql"
+cask "provisionql"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "suspicious-package"
+cask "webpquicklook"
+
+# OSS apps
+cask "gitup"
+cask "google-chrome"
+cask "grandperspective"
+cask "iterm2"
+cask "kicad"
+cask "virtualbox"
+cask "arduino"
+
+# Licensed apps
+cask "microsoft-office"
+
+# App Store apps
+mas "1Password", id: 443987910
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
