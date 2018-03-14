@@ -12,6 +12,23 @@
 
 ## Private Config Files
 
-You can add your private content to `zshrc.private`, `gitconfig.private`, and `ssh/config.private`. These files are
-included into their respective main config file, and are ignored by git. Additionally, all files within the `ssh` directory
-other than `ssh/config` are ignored by git.
+The default `gitignore` file ignores all files with a `.private` suffix. This allows you to flexibly maintain sensitive
+parts of your configuration as described below.
+
+### Environment setting & Shell Scripts
+
+The default `.zshrc` file includes all files in `.zshrc.d`, regardless of extension. If you have private environment
+variables you wish to set (and do not want to use a per-project environment manager), you can manage them via a file in
+the `.zshrc.d` directory with a `.private` extension.
+
+### Git 
+
+You can add private git configuration information to `gitconfig.private`, which is automatically included in the main
+`gitconfig` file.
+
+### SSH 
+
+You can add private git configuration information to `ssh/config.private`, which is automatically included in the main
+`gitconfig` file. Additionally, all files within the `ssh` directory other than `ssh/config` are ignored by git. This
+means that your keys, authorized hosts file and other SSH information are not managed as part of this dotfiles project.
+

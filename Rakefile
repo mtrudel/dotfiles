@@ -23,7 +23,7 @@ end
 desc 'Installs symlinks to dotfiles from this repo'
 task :dotfiles do
   puts 'Installing symlinks to config files'
-  %w(bin gitconfig gitconfig.private gitignore hushlogin oh-my-zsh-custom ssh zshrc zshrc.private).each do |file|
+  %w(bin gitconfig gitconfig.private gitignore hushlogin oh-my-zsh-custom ssh zshrc zshrc.d).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
 end

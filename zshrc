@@ -41,11 +41,14 @@ function bers() { ber s "$*"; }
 export ERL_AFLAGS="-kernel shell_history enabled"
 touch ~/.iex_history
 
-if [[ -f "$HOME/.zshrc.private" ]]; then
-  source "$HOME/.zshrc.private"
-fi
-
 if [[ -d "$HOME/.asdf" ]]; then
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
 fi
+
+if [ -d $HOME/.zshrc.d ]; then
+  for file in $HOME/.zshrc.d/*; do
+    source $file
+  done
+fi
+
