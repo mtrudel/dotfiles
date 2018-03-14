@@ -26,6 +26,7 @@ function chpwd() {
 export EDITOR=vim
 
 # Useful aliases
+function serve() { open -a Google\ Chrome http://localhost:8000/ ;  ruby -run -e httpd . -p 8000 -b 127.0.0.1 }
 function gu() { gitup commit }
 function hb() { hub browse }
 function pr() { git push origin -u && hub pull-request $* }
