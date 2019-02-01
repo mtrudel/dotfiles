@@ -17,7 +17,7 @@ setopt append_history no_inc_append_history no_share_history
 path=($HOME/.bin $path)
 
 # Make cd work better
-cdpath=( ~ ~/Code ~/Desktop )
+cdpath=( ~ ~/Code ~/Desktop ~/Documents )
 function chpwd() {
   emulate -L zsh
   ls -l
