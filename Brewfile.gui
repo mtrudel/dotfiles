@@ -29,6 +29,7 @@ cask "virtualbox"
 cask "microsoft-office"
 
 # App Store apps
+mas "AdGuard for Safari", id: 1440147259 
 mas "1Password", id: 443987910
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
