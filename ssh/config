@@ -5,5 +5,5 @@ ForwardAgent yes
 UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 60
-UseRoaming no
 IdentityFile ~/.ssh/id_rsa
+
