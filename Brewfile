@@ -1,8 +1,9 @@
 brew "ack"
 brew "ripgrep"
 brew "git"
+brew "ag"
+brew "vim"
 brew "hub"
-brew "vim", args: ["with-override-system-vi"]
 brew "mas"
 
 brew "postgresql"
