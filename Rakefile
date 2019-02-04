@@ -54,6 +54,8 @@ desc 'Installs ruby / elixir / erlang versions specified in tools-version'
 task :asdf => :homebrew do
   puts 'Ensuring required Homebrew packages are installed'
   system "brew bundle --file=#{File.join(File.dirname(__FILE__), 'Brewfile.asdf')}"
+  puts 'Installing asdf repo'
+  system "git clone https://github.com/asdf-vm/asdf.git ~/.asdf"
   puts 'Installing symlinks to config files'
   %w(asdfrc default-gems gemrc tool-versions).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
