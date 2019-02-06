@@ -24,6 +24,8 @@ cask "slack"
 cask "spotify"
 cask "superduper"
 cask "virtualbox"
+cask "visual-studio-code"
+
 
 # Licensed apps
 cask "microsoft-office"
