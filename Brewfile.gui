@@ -8,7 +8,6 @@ cask "quicklook-json"
 cask "suspicious-package"
 cask "webpquicklook"
 
-# OSS apps
 cask "alfred"
 cask "arq"
 cask "dropbox"
@@ -17,6 +16,7 @@ cask "google-chrome"
 cask "grandperspective"
 cask "iterm2"
 cask "macmediakeyforwarder"
+cask "microsoft-office"
 cask "omnigraffle"
 cask "postbird"
 cask "sizeup"
@@ -25,10 +25,6 @@ cask "spotify"
 cask "superduper"
 cask "virtualbox"
 cask "visual-studio-code"
-
-
-# Licensed apps
-cask "microsoft-office"
 
 # App Store apps
 mas "AdGuard for Safari", id: 1440147259 
