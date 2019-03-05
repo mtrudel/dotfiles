@@ -8,6 +8,7 @@ cask "quicklook-json"
 cask "suspicious-package"
 cask "webpquicklook"
 
+cask "aerial"
 cask "alfred"
 cask "arq"
 cask "dropbox"
