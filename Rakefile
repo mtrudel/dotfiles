@@ -32,6 +32,12 @@ task :dotfiles do
   %w(settings.json keybindings.json snippets).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} \"$HOME/Library/Application Support/Code/User/#{file}\""
   end
+
+  puts 'Installing Karabiner elements config file symlinks'
+  system "mkdir -p $HOME/.config/karabiner/"
+  %w(karabiner.json).each do |file|
+    system "ln -fns #{File.join(File.dirname(__FILE__), file)} \"$HOME/.config/karabiner/#{file}\""
+  end
 end
 
 desc 'Installs vim environment from mtrudel/vimfiles'
