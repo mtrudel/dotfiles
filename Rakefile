@@ -62,7 +62,7 @@ task :homebrew do
   system 'brew bundle --global'
 end
 
-desc 'Installs ruby / elixir / erlang versions specified in tools-version'
+desc 'Installs ruby / elixir / erlang / node versions specified in tools-version'
 task :asdf => :homebrew do
   puts 'Ensuring required Homebrew packages are installed'
   system "brew bundle --file=#{File.join(File.dirname(__FILE__), 'Brewfile.asdf')}"
@@ -73,9 +73,11 @@ task :asdf => :homebrew do
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
   puts 'Ensuring plugins are installed'
-  %w(ruby erlang elixir).each do |plugin|
+  %w(ruby erlang elixir nodejs).each do |plugin|
     system "asdf plugin-add #{plugin}"
   end
+  puts 'Adding node team keys'
+  system "bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring"
   puts "Ensuring versions in .tool-versions are installed"
   system "(cd $HOME && asdf install)"
 end

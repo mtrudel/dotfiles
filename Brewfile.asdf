@@ -11,3 +11,6 @@ brew "unixodbc"
 
 # Needed for Erlang observer GUI
 brew "wxmac"
+
+# Needed for node
+brew "gnupg"
