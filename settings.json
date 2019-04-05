@@ -9,7 +9,6 @@
     "window.zoomLevel": 0,
     "gitlens.hovers.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "editor.fontSize": 13,
     "editor.showUnused": false,
     "workbench.statusBar.feedback.visible": false,
     "breadcrumbs.enabled": true,
@@ -25,8 +24,11 @@
     "editor.formatOnSave": true,
     "elixirLS.suggestSpecs": false,
     "workbench.iconTheme": null,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Solarized Light",
     "markdown.preview.fontFamily": "Menlo, Monaco, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif",
-    "editor.fontWeight": "bold",
-    "editor.occurrencesHighlight": false
+    "editor.occurrencesHighlight": false,
+    "editor.fontFamily": "Menlo",
+    "debug.console.fontFamily": "defau, Monaco, 'Courier New', monospacelt",
+    "workbench.fontAliasing": "antialiased",
+    "editor.fontSize": 13,
 }
