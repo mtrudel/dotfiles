@@ -37,15 +37,8 @@ function ber() { be rails "$*"; }
 function berc() { ber c "$*"; }
 function bers() { ber s "$*"; }
 
-
-if [[ -d "$HOME/.asdf" ]]; then
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
-fi
-
 if [ -d $HOME/.zshrc.d ]; then
   for file in $HOME/.zshrc.d/*; do
     source $file
   done
 fi
-
