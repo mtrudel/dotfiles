@@ -37,9 +37,6 @@ function ber() { be rails "$*"; }
 function berc() { ber c "$*"; }
 function bers() { ber s "$*"; }
 
-# Enable history in iex
-export ERL_AFLAGS="-kernel shell_history enabled"
-touch ~/.iex_history
 
 if [[ -d "$HOME/.asdf" ]]; then
   source $HOME/.asdf/asdf.sh

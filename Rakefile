@@ -26,6 +26,7 @@ task :dotfiles do
   %w(bin gitconfig gitconfig.private gitignore hushlogin oh-my-zsh-custom ssh zshrc zshrc.d).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
+  system "touch $HOME/.iex_history"
 
   puts 'Installing VS Code config file symlinks'
   system "mkdir -p $HOME/Library/Application\ Support/Code/User/"
