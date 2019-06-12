@@ -18,7 +18,9 @@
   interactive = auto
   status = auto
 [merge]
+  ff = only
   tool = opendiff
+  conflictstyle = diff3
 [difftool]
   prompt = false
 [branch]
