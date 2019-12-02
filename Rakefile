@@ -30,8 +30,8 @@ task :dotfiles do
 
   puts 'Installing VS Code config file symlinks'
   system "mkdir -p $HOME/Library/Application\ Support/Code/User/"
-  %w(settings.json keybindings.json snippets).each do |file|
-    system "ln -fns #{File.join(File.dirname(__FILE__), file)} \"$HOME/Library/Application Support/Code/User/#{file}\""
+  %w(settings.json keybindings.json).each do |file|
+    system "ln -fns #{File.join(File.dirname(__FILE__), 'vscode', file)} \"$HOME/Library/Application Support/Code/User/#{file}\""
   end
 end
 
