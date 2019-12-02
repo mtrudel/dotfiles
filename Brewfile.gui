@@ -8,10 +8,10 @@ cask "quicklook-json"
 cask "suspicious-package"
 cask "webpquicklook"
 
+cask "1password"
 cask "aerial"
 cask "alfred"
 cask "arq"
-cask "dropbox"
 cask "gitup"
 cask "google-chrome"
 cask "grandperspective"
@@ -19,17 +19,13 @@ cask "iterm2"
 cask "macmediakeyforwarder"
 cask "microsoft-office"
 cask "omnigraffle"
-cask "postbird"
 cask "sizeup"
 cask "slack"
 cask "spotify"
 cask "superduper"
-cask "virtualbox"
 cask "visual-studio-code"
 
 # App Store apps
-mas "Better Blocker", id: 1121192229
-mas "1Password", id: 443987910
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Keynote", id: 409183694
