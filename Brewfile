@@ -2,7 +2,7 @@ brew "ack"
 brew "ripgrep"
 brew "git"
 brew "ag"
-brew "vim"
+brew "neovim"
 brew "hub"
 brew "mas"
 

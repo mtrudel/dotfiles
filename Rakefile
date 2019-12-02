@@ -41,14 +41,14 @@ task :dotfiles do
   end
 end
 
-desc 'Installs vim environment from mtrudel/vimfiles'
+desc 'Installs vim environment'
 task :vim do
-  puts 'Ensuring vim environment exists'
-  system '[ -f $HOME/.vim/vimrc ] || git clone https://github.com/mtrudel/vimfiles.git $HOME/.vim'
+  puts 'Ensuring vim package manager is installed'
+  system 'mkdir -p $HOME/.vim/bundle'
+  system '[ -f $HOME/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim'
   puts 'Updating vim environment'
-  system '(cd $HOME/.vim && git pull)'
-  puts 'Configuring vim environment'
-  system '(cd $HOME/.vim && rake)'
+  system "ln -fns #{File.join(File.dirname(__FILE__), 'vimrc')} $HOME/.vimrc"
+  system 'nvim +PluginInstall +qall'
 end
 
 desc 'Installs homebrew packages specified in Brewfile'
