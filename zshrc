@@ -1,3 +1,6 @@
+ZSHRC=$HOME/.zshrc
+export DOTFILE_PATH=$(dirname ${ZSHRC:A})
+
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="mtrudel"
@@ -26,6 +29,8 @@ function chpwd() {
 export EDITOR=vim
 
 # Useful aliases
+alias dotfile='cd $DOTFILE_PATH'
+
 function serve() { open -a Google\ Chrome http://localhost:8000/ ;  ruby -run -e httpd . -p 8000 -b 127.0.0.1 }
 function gu() { gitup commit }
 function hb() { hub browse }
