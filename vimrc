@@ -13,10 +13,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'elixir-editors/vim-elixir'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjbach/lusty'
-Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'mtrudel/vim-mix-format'
 Plugin 'sjl/vitality.vim'
 Plugin 'bkad/CamelCaseMotion'
@@ -170,14 +167,6 @@ map <leader>f :Ack
 set grepprg=ag\ --nogroup\ --nocolor
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-
-" Powerline / Airline
-" ===================
-
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
-
-
 " Neomake
 " =======
 
@@ -198,11 +187,5 @@ function! RubocopAutoFix()
   silent exe "e %"
   silent exe "Neomake"
 endfun
-
-" RainbowParentheses
-" ==================
-
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-nmap <leader>r :RainbowParentheses!!<CR>
 
 let g:mix_format_silent_errors = 1
