@@ -1,1 +1,1 @@
-. /usr/local/opt/asdf/asdf.sh
+. ~/.asdf/asdf.sh
