@@ -30,6 +30,10 @@ task :dotfiles do
 
   system "ssh-add -K ~/.ssh/id_rsa"
 
+  puts 'Installing neovim shims to work with regular vim config'
+  system "mkdir -p $HOME/.config/nvim"
+  system "ln -fns #{File.join(File.dirname(__FILE__), 'init.vim')} \"$HOME/.config/nvim/init.vim\""
+
   puts 'Installing VS Code config file symlinks'
   system "mkdir -p $HOME/Library/Application\ Support/Code/User/"
   %w(settings.json keybindings.json).each do |file|
