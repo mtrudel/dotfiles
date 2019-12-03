@@ -1,8 +1,7 @@
 brew "ack"
-brew "ripgrep"
 brew "git"
-brew "ag"
 brew "neovim"
+brew "fzf"
 brew "hub"
 brew "mas"
 
