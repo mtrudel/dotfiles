@@ -1,4 +1,5 @@
 brew "ack"
+brew "ag"
 brew "git"
 brew "neovim"
 brew "fzf"

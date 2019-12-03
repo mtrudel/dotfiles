@@ -75,12 +75,12 @@ task :asdf => :homebrew do
   end
   puts 'Ensuring plugins are installed'
   %w(ruby erlang elixir nodejs).each do |plugin|
-    system "asdf plugin-add #{plugin}"
+    system ". ~/.asdf/asdf.sh && asdf plugin-add #{plugin}"
   end
   puts 'Adding node team keys'
   system "bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring"
   puts "Ensuring versions in .tool-versions are installed"
-  system "(cd $HOME && asdf install)"
+  system "(cd $HOME && . ~/.asdf/asdf.sh && asdf install)"
 end
 
 desc 'Installs GUI apps specified in Brewfile.gui'
