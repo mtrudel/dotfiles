@@ -1,7 +1,7 @@
 desc 'Installs a complete CLI environment'
 task :default => [:oh_my_zsh, :dotfiles, :vim, :homebrew, :asdf]
 
-desc 'Changes sheel to zsh'
+desc 'Changes shell to zsh'
 task :shell do
   system '[ "$SHELL" == `which zsh` ] || chsh -s `which zsh`'
 end
@@ -27,6 +27,8 @@ task :dotfiles do
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
   system "touch $HOME/.iex_history"
+
+  system "ssh-add -K ~/.ssh/id_rsa"
 
   puts 'Installing VS Code config file symlinks'
   system "mkdir -p $HOME/Library/Application\ Support/Code/User/"

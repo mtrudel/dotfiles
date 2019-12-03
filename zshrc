@@ -30,6 +30,7 @@ export EDITOR=vim
 
 # Useful aliases
 alias dotfile='cd $DOTFILE_PATH'
+alias vi=nvim
 
 function serve() { open -a Google\ Chrome http://localhost:8000/ ;  ruby -run -e httpd . -p 8000 -b 127.0.0.1 }
 function gu() { gitup commit }
