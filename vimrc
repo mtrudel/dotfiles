@@ -183,7 +183,7 @@ call neomake#configure#automake('rw')
 
 function! RubocopAutoFix()
   exe "w"
-  silent exe "!rubocop -a --only Layout % &> /dev/null"
+  silent exe "!bundle exec rubocop -a --only Layout % &> /dev/null"
   silent exe "e %"
   silent exe "Neomake"
 endfun
