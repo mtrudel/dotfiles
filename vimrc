@@ -189,3 +189,5 @@ function! RubocopAutoFix()
 endfun
 
 let g:mix_format_silent_errors = 1
+
+let g:blameLineGitFormat = "%an | (%h) %ar | %s"
