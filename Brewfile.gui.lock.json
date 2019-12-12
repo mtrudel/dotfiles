@@ -41,7 +41,7 @@
         "version": "78.0.3904.108"
       },
       "grandperspective": {
-        "version": "2.2.3"
+        "version": "2.3.0"
       },
       "iterm2": {
         "version": "3.3.7"
@@ -93,10 +93,10 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.0",
+        "HOMEBREW_VERSION": "2.2.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "0b348b6be5c2fa607bec23af039e7415536ba06c",
-        "CLT": "11.2.0.0.1.1571444319",
+        "Homebrew/homebrew-core": "c55eef9dcc910f309d5b5956a4059f237c76ad2d",
+        "CLT": "11.3.0.0.1.1574140115",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
       }
