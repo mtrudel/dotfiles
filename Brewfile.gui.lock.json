@@ -40,9 +40,6 @@
       "google-chrome": {
         "version": "78.0.3904.108"
       },
-      "grandperspective": {
-        "version": "2.3.0"
-      },
       "iterm2": {
         "version": "3.3.7"
       },
@@ -69,6 +66,9 @@
       },
       "visual-studio-code": {
         "version": "1.40.2"
+      },
+      "omnidisksweeper": {
+        "version": "1.12"
       }
     },
     "mas": {
@@ -95,10 +95,10 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c55eef9dcc910f309d5b5956a4059f237c76ad2d",
-        "CLT": "11.3.0.0.1.1574140115",
-        "Xcode": "11.2.1",
-        "macOS": "10.15.1"
+        "Homebrew/homebrew-core": "680e941d54f3212161e1d5544fb17938bce9690a",
+        "CLT": "1100.0.33.16",
+        "Xcode": "11.3",
+        "macOS": "10.15.2"
       }
     }
   }
