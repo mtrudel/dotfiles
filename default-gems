@@ -1,2 +1,4 @@
 pry
 neovim
+bundler
+rubocop
