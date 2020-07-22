@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle.vundle')
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'slime-lang/vim-slime-syntax'
 Plugin 'benekastah/neomake'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -135,6 +136,7 @@ if has("autocmd")
   autocmd FileType make set noexpandtab
   autocmd FileType md set nonumber
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
+  autocmd BufNewFile,BufRead *.slim set filetype=slime
   autocmd BufWritePre * :s/\s\+$//e
   autocmd BufWritePost * :GitGutter
   autocmd BufWritePost *.ex,*.exs :MixFormat
