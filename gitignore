@@ -5,3 +5,4 @@ Icon?
 .Spotlight-V100
 .Trashes
 **/.elixir_ls/*
+.env
