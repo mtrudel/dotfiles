@@ -8,6 +8,9 @@ cask "quicklook-json"
 cask "suspicious-package"
 cask "webpquicklook"
 
+# Default app prefpane
+cask "swiftdefaultappsprefpane"
+
 cask "1password"
 #cask "aerial"
 cask "alfred"
