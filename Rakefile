@@ -27,18 +27,13 @@ task :dotfiles do
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
   system "touch $HOME/.iex_history"
+  system "chmod og-rwx $HOME/.ssh/*"
 
   system "ssh-add -K ~/.ssh/id_rsa"
 
   puts 'Installing neovim shims to work with regular vim config'
   system "mkdir -p $HOME/.config/nvim"
   system "ln -fns #{File.join(File.dirname(__FILE__), 'init.vim')} \"$HOME/.config/nvim/init.vim\""
-
-  puts 'Installing VS Code config file symlinks'
-  system "mkdir -p $HOME/Library/Application\ Support/Code/User/"
-  %w(settings.json keybindings.json).each do |file|
-    system "ln -fns #{File.join(File.dirname(__FILE__), 'vscode', file)} \"$HOME/Library/Application Support/Code/User/#{file}\""
-  end
 end
 
 desc 'Installs vim environment'
@@ -54,7 +49,7 @@ end
 desc 'Installs homebrew packages specified in Brewfile'
 task :homebrew do
   puts 'Ensuring Homebrew is installed'
-  system 'which brew > /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  system 'which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
   puts 'Updating Homebrew'
   system 'brew update'
   puts 'Installing symlink to Brewfile'
