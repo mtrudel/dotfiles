@@ -1,11 +1,8 @@
 brew "ack"
 brew "ag"
-brew "git"
-brew "neovim"
 brew "fzf"
 brew "hub"
 brew "mas"
-brew "tidy-html5"
-
+brew "nvim"
 brew "postgresql"
 brew "redis"

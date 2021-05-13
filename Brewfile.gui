@@ -1,36 +1,24 @@
-# Quicklook plugins
-cask "provisionql"
-cask "qlmarkdown"
-cask "qlprettypatch"
-cask "qlstephen"
-cask "quicklook-csv"
-cask "quicklook-json"
-cask "suspicious-package"
-cask "webpquicklook"
-
-# Default app prefpane
-cask "swiftdefaultappsprefpane"
-
 cask "1password"
 #cask "aerial"
 cask "alfred"
-cask "arq"
-cask "deckset"
+brew "switchaudio-osx"
+#cask "deckset"
 cask "gitup"
 cask "google-chrome"
 cask "iterm2"
-cask "macmediakeyforwarder"
-#cask "microsoft-office"
-cask "omnidisksweeper"
-cask "omnigraffle"
-cask "sizeup"
-cask "slack"
+#cask "nvalt"
+#cask "omnigraffle"
+cask "rectangle"
+#cask "slack"
 cask "spotify"
 cask "superduper"
-cask "visual-studio-code"
+#cask "visual-studio-code"
 
 # App Store apps
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Keynote", id: 409183694
 mas "Xcode", id: 497799835
+
+brew "qlstephen"
+brew "qlmarkdown"
