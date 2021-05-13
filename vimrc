@@ -15,7 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'sjbach/lusty'
-Plugin 'mtrudel/vim-mix-format'
+Plugin 'sbdchd/neoformat'
 Plugin 'sjl/vitality.vim'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'junegunn/fzf'
@@ -41,7 +41,7 @@ set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
 set nowrap
-set textwidth=120
+set textwidth=98
 set linebreak
 set formatoptions=r1tcq
 set ignorecase
@@ -84,7 +84,7 @@ set title
 set equalalways " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
-set colorcolumn=80,120
+set colorcolumn=80,98
 
 set termguicolors
 set background=light
@@ -120,9 +120,8 @@ nmap <leader>V :e ~/.vimrc<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 nmap <leader>1 :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
-nmap <leader>o :only<CR>
-nmap <leader>= :MixFormat<CR>
-nmap <leader>af :call RubocopAutoFix()<CR>
+nmap <leader>= :Neoformat<CR>
+
 
 " File type tweaks
 " ================
@@ -137,9 +136,9 @@ if has("autocmd")
   autocmd FileType md set nonumber
   autocmd BufNewFile,BufRead,BufEnter Rakefile,Capfile,Vagrantfile set filetype=ruby
   autocmd BufNewFile,BufRead *.slim set filetype=slime
-  autocmd BufWritePre * :s/\s\+$//e
+  "autocmd BufWritePre * :s/\s\+$//e
   autocmd BufWritePost * :GitGutter
-  autocmd BufWritePost *.ex,*.exs :MixFormat
+  autocmd BufWritePre *.ex,*.exs undojoin | Neoformat
   autocmd StdinReadPre * let s:std_in=1
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
@@ -161,6 +160,8 @@ highlight clear SignColumn
 nnoremap <silent> <leader>t :Files<cr>
 nnoremap <silent> <leader>T :GFiles<cr>
 let $FZF_DEFAULT_COMMAND= 'ag -g ""'
+let g:fzf_preview_window = []
+let g:fzf_layout = { 'window': '15new' }
 
 " ack
 " ===
@@ -173,6 +174,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " =======
 
 " let g:neomake_verbose = 3
+let g:neomake_tempfile_dir = '/tmp/neomake'
 let g:neomake_logfile = '/tmp/neomake.log'
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 let g:neomake_elixir_enabled_makers = ['mix', 'credo']
@@ -183,13 +185,7 @@ let g:neomake_highlight_columns = 0
 
 call neomake#configure#automake('rw')
 
-function! RubocopAutoFix()
-  exe "w"
-  silent exe "!bundle exec rubocop -a --only Layout % &> /dev/null"
-  silent exe "e %"
-  silent exe "Neomake"
-endfun
 
-let g:mix_format_silent_errors = 1
+let g:neoformat_only_msg_on_error = 1
 
 let g:blameLineGitFormat = "%an | (%h) %ar | %s"
