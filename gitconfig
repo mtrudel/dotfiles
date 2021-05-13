@@ -48,3 +48,5 @@
   prune = true
 [include]
   path = .gitconfig.private
+[pull]
+	rebase = false
