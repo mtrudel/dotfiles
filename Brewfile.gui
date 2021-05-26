@@ -13,6 +13,7 @@ cask "rectangle"
 cask "spotify"
 cask "superduper"
 #cask "visual-studio-code"
+cask "vimr"
 
 # App Store apps
 mas "Numbers", id: 409203825
