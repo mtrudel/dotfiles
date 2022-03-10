@@ -50,3 +50,5 @@
   path = .gitconfig.private
 [pull]
   rebase = false
+[init]
+  defaultBranch = main

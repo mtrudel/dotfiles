@@ -11,7 +11,7 @@ unsetopt correct_all
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
-plugins=(git osx rails rake)
+plugins=(git macos rails rake)
 
 source $ZSH/oh-my-zsh.sh
 
