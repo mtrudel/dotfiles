@@ -52,15 +52,9 @@ end
 
 desc 'Installs vim'
 task :vim do
-  puts 'Installing neovim shims to work with regular vim config'
-  system "mkdir -p $HOME/.config/nvim"
-  system "ln -fns #{File.join(File.dirname(__FILE__), 'init.vim')} \"$HOME/.config/nvim/init.vim\""
-  puts 'Ensuring vim package manager is installed'
-  system 'mkdir -p $HOME/.vim/bundle'
-  system '[ -f $HOME/.vim/bundle/Vundle.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim'
-  puts 'Updating vim environment'
-  system "ln -fns #{File.join(File.dirname(__FILE__), 'vimrc')} $HOME/.vimrc"
-  system 'nvim +VundleInstall +qall'
+  puts 'Installing neovim config'
+  system "mkdir -p $HOME/.config"
+  system "ln -fns #{File.join(File.dirname(__FILE__), 'nvim')} \"$HOME/.config/nvim\""
 end
 
 desc 'Checks to see what personalization needs to be done'
