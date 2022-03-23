@@ -19,15 +19,15 @@ desc 'Installs homebrew packages specified in Brewfile'
 task :homebrew => :dotfiles do
   puts 'Ensuring Command Line Tools are installed'
   system '[ -d "$(xcode-select -print-path 2> /dev/null)" ] > /dev/null || (xcode-select --install && read -u "Press any key once the Command Line Tools package is installed")'
-  puts 'Ensuring ASi Homebrew is installed (if applicable)'
-  system 'arch | grep -q arm64 && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+  puts 'Ensuring Homebrew is installed'
+  system '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
   puts 'Installing symlinks to config files'
   %w(psqlrc).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
 
-  puts 'Running `brew bundle` for native'
+  puts 'Running `brew bundle`'
   system 'zsh -ic "brew bundle --file Brewfile"'
 end
 
