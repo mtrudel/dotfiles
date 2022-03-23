@@ -62,7 +62,7 @@ opt.wrap = false
 
 vim.g["ackprg"] = "ag --nogroup --nocolor --column"
 vim.g["blameLineGitFormat"] = "%an | (%h) %ar | %s"
-vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby", "elixir"}
+vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby"}
 
 vim.cmd [[
   autocmd BufWritePre *.ex,*.exs undojoin | lua vim.lsp.buf.formatting_sync()
