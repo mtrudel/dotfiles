@@ -13,6 +13,8 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 plugins=(git macos rails rake)
 
+ZSH_DISABLE_COMPFIX=true
+
 source $ZSH/oh-my-zsh.sh
 
 setopt append_history no_inc_append_history no_share_history
