@@ -1,11 +1,7 @@
 brew "ack"
-brew "ag"
-brew "fzf"
 brew "hub"
 brew "mas"
 brew "nvim"
-brew "postgresql"
-brew "redis"
 
 # asdf
 brew "coreutils"

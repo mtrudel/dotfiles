@@ -2,6 +2,7 @@ cask "1password"
 #cask "aerial"
 cask "alfred"
 brew "switchaudio-osx"
+cask "docker"
 #cask "deckset"
 cask "gitup"
 cask "google-chrome"
@@ -12,8 +13,8 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "superduper"
+cask "tableplus"
 cask "visual-studio-code"
-cask "vimr"
 
 # App Store apps
 mas "Numbers", id: 409203825
