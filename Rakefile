@@ -10,7 +10,7 @@ task :dotfiles do
   system "mkdir -m 700 $HOME/.ssh"
 
   puts 'Installing symlinks to config files'
-  %w(bin gitconfig gitignore hushlogin oh-my-zsh-custom ssh/config zshrc zshrc.d).each do |file|
+  %w(ackrc bin gitconfig gitignore hushlogin oh-my-zsh-custom ssh/config zshrc zshrc.d).each do |file|
     system "ln -fns #{File.join(File.dirname(__FILE__), file)} $HOME/.#{file}"
   end
 end
