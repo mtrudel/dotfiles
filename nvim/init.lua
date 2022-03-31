@@ -65,7 +65,7 @@ vim.g["blameLineGitFormat"] = "%an | (%h) %ar | %s"
 vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby"}
 
 vim.cmd [[
-  autocmd BufWritePre *.ex,*.exs undojoin | lua vim.lsp.buf.formatting_sync()
+  autocmd BufWritePre *.ex,*.exs silent! undoj | lua vim.lsp.buf.formatting_sync()
   autocmd FileType markdown setlocal wrap linebreak textwidth=80
 ]]
 
@@ -76,7 +76,7 @@ vim.api.nvim_set_keymap('n', '<leader><space>', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>B', ':ToggleBlameLine<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>T', ":lua require('telescope.builtin').find_files {previewer = false}<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>b', ':LustyJuggler<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>f', ':Ack<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>f', ':Ack ', opts)
 vim.api.nvim_set_keymap('n', '<leader>j', ':NERDTreeFind<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>t', ":lua require('telescope.builtin').git_files {previewer = false}<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>w', ':set wrap!<CR>', opts)

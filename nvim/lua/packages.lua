@@ -14,6 +14,8 @@ startup({
     use("neovim/nvim-lspconfig")
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/vim-vsnip")
     use("overcache/NeoSolarized")
     use("mileszs/ack.vim")
     use("preservim/nerdcommenter")
