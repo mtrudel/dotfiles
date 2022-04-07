@@ -19,10 +19,19 @@ cmp.setup({
     ["<Enter>"] = cmp.mapping.confirm({ select = true }),
   },
   sources = {
-    { name = "nvim_lsp" },
+    { name = "nvim_lsp", keyword_length = 5 },
+    { name = "buffer", keyword_length = 5 }
   },
+  formatting = {
+    format = require("lspkind").cmp_format({
+      with_text = true,
+      menu = {
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+      },
+    }),
+  }
 })
-
 
 local opt = vim.opt
 opt.autoindent = true
