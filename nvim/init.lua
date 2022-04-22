@@ -1,6 +1,7 @@
 require('packages')
 require('treesitter')
 require('lsp')
+require('cmp-local')
 
 vim.cmd('colorscheme NeoSolarized')
 
@@ -9,28 +10,6 @@ vim.diagnostic.config({
     prefix = '◀',
   },
   underline = true
-})
-
-local cmp = require("cmp")
-
-cmp.setup({
-  mapping = {
-    ["<Esc>"] = cmp.mapping.close(),
-    ["<Enter>"] = cmp.mapping.confirm({ select = true }),
-  },
-  sources = {
-    { name = "nvim_lsp", keyword_length = 5 },
-    { name = "buffer", keyword_length = 5 }
-  },
-  formatting = {
-    format = require("lspkind").cmp_format({
-      with_text = true,
-      menu = {
-        buffer = "[Buffer]",
-        nvim_lsp = "[LSP]",
-      },
-    }),
-  }
 })
 
 local opt = vim.opt
@@ -98,4 +77,5 @@ vim.api.nvim_set_keymap('', 'Q', '"<nop>', opts)
 vim.api.nvim_set_keymap('', 'QQ', ':q<CR>', opts)
 vim.api.nvim_set_keymap('', 's', '"_s', opts)
 vim.api.nvim_set_keymap('', 'x', '"_x', opts)
+vim.api.nvim_set_keymap('i','#', 'X#', opts)
 opt.grepprg = "ag --nogroup --nocolor"
