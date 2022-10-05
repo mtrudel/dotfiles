@@ -55,6 +55,7 @@ vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby"}
 
 vim.cmd [[
   autocmd BufWritePre *.ex,*.exs silent! undoj | lua vim.lsp.buf.formatting_sync()
+  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
   autocmd FileType markdown setlocal wrap linebreak textwidth=80
 ]]
 
