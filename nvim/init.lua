@@ -82,4 +82,8 @@ vim.api.nvim_set_keymap('', 'QQ', ':q<CR>', opts)
 vim.api.nvim_set_keymap('', 's', '"_s', opts)
 vim.api.nvim_set_keymap('', 'x', '"_x', opts)
 vim.api.nvim_set_keymap('i','#', 'X#', opts)
+vim.api.nvim_set_keymap('i','<C-a>', '<C-o>^', opts)
+vim.api.nvim_set_keymap('i','<C-e>', '<C-o>$', opts)
+vim.api.nvim_set_keymap('i','<C-b>', '<C-o>b', opts)
+vim.api.nvim_set_keymap('i','<C-f>', '<C-o>w', opts)
 opt.grepprg = "ag --nogroup --nocolor"
