@@ -22,13 +22,12 @@ startup({
     use("preservim/nerdcommenter")
     use("airblade/vim-gitgutter")
     use("onsails/lspkind-nvim")
-    use("preservim/nerdtree")
     use("tpope/vim-fugitive")
     use("tpope/vim-rhubarb")
     use("sjbach/lusty")
     use("tveskag/nvim-blame-line")
-    use{'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }
-}
+    use{'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+    use {'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
   end,
   config = {
     max_jobs = 30,

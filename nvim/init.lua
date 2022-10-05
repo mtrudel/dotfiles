@@ -2,6 +2,7 @@ require('packages')
 require('treesitter')
 require('lsp')
 require('cmp-local')
+require('tree')
 
 vim.cmd('colorscheme NeoSolarized')
 
@@ -59,13 +60,13 @@ vim.cmd [[
 
 vim.g.mapleader = ","
 local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '<leader>1', ':NERDTreeToggle<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>1', ':NvimTreeToggle<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader><space>', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>B', ':ToggleBlameLine<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>T', ":lua require('telescope.builtin').find_files {previewer = false}<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>b', ':LustyJuggler<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>f', ':Ack ', opts)
-vim.api.nvim_set_keymap('n', '<leader>j', ':NERDTreeFind<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>j', ':NvimTreeFindFileToggle<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>t', ":lua require('telescope.builtin').git_files {previewer = false}<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>h', ":lua vim.lsp.buf.hover()<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>w', ':set wrap!<CR>', opts)
