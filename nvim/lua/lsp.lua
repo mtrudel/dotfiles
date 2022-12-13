@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local on_attach = function(_, bufnr)
-  require("cmp_nvim_lsp").update_capabilities(capabilities)
+  require("cmp_nvim_lsp").default_capabilities(capabilities)
 end
 
 --- Set up Elixir LSP

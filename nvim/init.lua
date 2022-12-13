@@ -39,8 +39,10 @@ opt.shortmess = "atI"
 opt.showcmd = true
 opt.showmatch = true
 opt.showmode = true
+opt.signcolumn = "yes"
 opt.smartcase = true
 opt.smartindent = true
+opt.swapfile = false
 opt.tabstop = 2
 opt.termguicolors = true
 opt.textwidth = 98
@@ -54,7 +56,7 @@ vim.g["blameLineGitFormat"] = "%an | (%h) %ar | %s"
 vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby"}
 
 vim.cmd [[
-  autocmd BufWritePre *.ex,*.exs silent! undoj | lua vim.lsp.buf.formatting_sync()
+  autocmd BufWritePre *.ex,*.exs silent! undoj | lua vim.lsp.buf.format()
   autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
   autocmd FileType markdown setlocal wrap linebreak textwidth=80
 ]]
