@@ -13,42 +13,8 @@ cmp.setup({
   },
   window = {},
   mapping = cmp.mapping.preset.insert({
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if has_words_before() then
-        cmp.complete()
-      else
-        fallback() 
-      end
-    end, { "i", "s" }),
-
-    ['<Down>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback() 
-      end
-    end, { "i", "s" }),
-    ['<Up>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback() 
-      end
-    end, { "i", "s" }),
-    ['<Esc>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.abort()
-      else
-        fallback() 
-      end
-    end, { "i", "s" }),
-    ['<CR>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.confirm({ select = true })
-      else
-        fallback() 
-      end
-    end, { "i", "s" }),
+   ['<C-p>'] = cmp.mapping.complete(),
+   ['<CR>'] = cmp.mapping.confirm({ select = true })
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
