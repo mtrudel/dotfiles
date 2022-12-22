@@ -2,6 +2,9 @@ brew "ack"
 brew "hub"
 brew "mas"
 brew "nvim"
+brew "ripgrep"
+brew "switchaudio-osx"
+brew "the_silver_searcher"
 
 # asdf
 brew "coreutils"
