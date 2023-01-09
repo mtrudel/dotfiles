@@ -1,5 +1,6 @@
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 path=(/opt/homebrew/bin $path)
+path=(/opt/homebrew/sbin $path)
 
 alias ibrew='PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin arch -x86_64 brew'
