@@ -1,7 +1,6 @@
 Include ~/.ssh/config.private
 
 Host *
-ForwardAgent yes
 UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 60
