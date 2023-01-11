@@ -13,80 +13,78 @@ vim.diagnostic.config({
   underline = true
 })
 
-local opt = vim.opt
-opt.autoindent = true
-opt.background = "light"
-opt.backspace = {"indent", "eol", "start"}
-opt.clipboard= "unnamedplus"
-opt.colorcolumn = {80, 98}
-opt.cursorline = true
-opt.encoding = "utf-8"
-opt.expandtab = true
-opt.formatoptions = "r1tcq"
-opt.gdefault = true
-opt.hidden = true
-opt.ignorecase = true
-opt.incsearch = true
-opt.lazyredraw = true
-opt.linebreak = true
-opt.listchars= {eol = '↲', tab = '▸ ', trail = '·'}
-opt.modelines = 0
-opt.mouse = "a"
-opt.number = true
-opt.scrolloff = 3
-opt.shiftwidth = 2
-opt.shortmess = "atI"
-opt.showcmd = true
-opt.showmatch = true
-opt.showmode = true
-opt.signcolumn = "yes"
-opt.smartcase = true
-opt.smartindent = true
-opt.swapfile = false
-opt.tabstop = 2
-opt.termguicolors = true
-opt.textwidth = 98
-opt.title = true
-opt.vb = false
-opt.wildmode = "list:longest"
-opt.wrap = false
+vim.opt.autoindent = true
+vim.opt.background = "light"
+vim.opt.backspace = {"indent", "eol", "start"}
+vim.opt.clipboard= "unnamedplus"
+vim.opt.colorcolumn = {80, 98}
+vim.opt.cursorline = true
+vim.opt.encoding = "utf-8"
+vim.opt.expandtab = true
+vim.opt.formatoptions = "r1tcq"
+vim.opt.gdefault = true
+vim.opt.hidden = true
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
+vim.opt.lazyredraw = true
+vim.opt.linebreak = true
+vim.opt.listchars= {eol = '↲', tab = '▸ ', trail = '·'}
+vim.opt.modelines = 0
+vim.opt.mouse = "a"
+vim.opt.number = true
+vim.opt.scrolloff = 3
+vim.opt.shiftwidth = 2
+vim.opt.shortmess = "atI"
+vim.opt.showcmd = true
+vim.opt.showmatch = true
+vim.opt.showmode = true
+vim.opt.signcolumn = "yes"
+vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.swapfile = false
+vim.opt.tabstop = 2
+vim.opt.termguicolors = true
+vim.opt.textwidth = 98
+vim.opt.title = true
+vim.opt.vb = false
+vim.opt.wildmode = "list:longest"
+vim.opt.wrap = false
+vim.opt.grepprg = "ag --nogroup --nocolor"
 
-vim.g["ackprg"] = "ag --nogroup --nocolor --column"
-vim.g["blameLineGitFormat"] = "%an | (%h) %ar | %s"
-vim.g["markdown_fenced_languages"] = {"html", "javascript", "ruby"}
+vim.g.ackprg = "ag --nogroup --nocolor --column"
+vim.g.blameLineGitFormat = "%an | (%h) %ar | %s"
+vim.g.markdown_fenced_languages = {"html", "javascript", "ruby"}
+vim.g.mapleader = ","
+
+vim.keymap.set('n', '<leader>1', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader><space>', ':noh<CR>')
+vim.keymap.set('n', '<leader>b', function() require('telescope.builtin').oldfiles({previewer = false}) end)
+vim.keymap.set('n', '<leader>B', ':ToggleBlameLine<CR>')
+vim.keymap.set('n', '<leader>T', function() require('telescope.builtin').git_files({previewer = false}) end)
+vim.keymap.set('n', '<leader>f', ':Ack ')
+vim.keymap.set('n', '<leader>j', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>t', function() require('telescope.builtin').find_files({previewer = false}) end)
+vim.keymap.set('n', '<leader>h', vim.lsp.buf.hover)
+vim.keymap.set('n', '<leader>w', ':set wrap!<CR>')
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('', 'C', '"_C')
+vim.keymap.set('', 'D', '"_D')
+vim.keymap.set('', 'c', '"_c')
+vim.keymap.set('', 'd', '"_d')
+vim.keymap.set('', 'dd', '"_dd')
+vim.keymap.set('', 'Q', '"<nop>')
+vim.keymap.set('', 'QQ', ':q<CR>')
+vim.keymap.set('', 's', '"_s')
+vim.keymap.set('', 'x', '"_x')
+vim.keymap.set('i','#', 'X#')
+vim.keymap.set('i','<C-a>', '<C-o>^')
+vim.keymap.set('i','<C-e>', '<C-o>$')
+vim.keymap.set('i','<C-b>', '<C-o>b')
+vim.keymap.set('i','<C-f>', '<C-o>w')
 
 vim.cmd [[
   autocmd BufWritePre *.ex,*.exs silent! undoj | lua vim.lsp.buf.format()
   autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
   autocmd FileType markdown setlocal wrap linebreak textwidth=80
 ]]
-
-vim.g.mapleader = ","
-local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '<leader>1', ':NvimTreeToggle<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader><space>', ':noh<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>B', ':ToggleBlameLine<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>T', ":lua require('telescope.builtin').git_files {previewer = false}<CR>", opts)
-vim.api.nvim_set_keymap('n', '<leader>b', ':LustyJuggler<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>f', ':Ack ', opts)
-vim.api.nvim_set_keymap('n', '<leader>j', ':NvimTreeFindFileToggle<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>t', ":lua require('telescope.builtin').find_files {previewer = false}<CR>", opts)
-vim.api.nvim_set_keymap('n', '<leader>h', ":lua vim.lsp.buf.hover()<CR>", opts)
-vim.api.nvim_set_keymap('n', '<leader>w', ':set wrap!<CR>', opts)
-vim.api.nvim_set_keymap('v', '<', '<gv', opts)
-vim.api.nvim_set_keymap('v', '>', '>gv', opts)
-vim.api.nvim_set_keymap('', 'C', '"_C', opts)
-vim.api.nvim_set_keymap('', 'D', '"_D', opts)
-vim.api.nvim_set_keymap('', 'c', '"_c', opts)
-vim.api.nvim_set_keymap('', 'd', '"_d', opts)
-vim.api.nvim_set_keymap('', 'dd', '"_dd', opts)
-vim.api.nvim_set_keymap('', 'Q', '"<nop>', opts)
-vim.api.nvim_set_keymap('', 'QQ', ':q<CR>', opts)
-vim.api.nvim_set_keymap('', 's', '"_s', opts)
-vim.api.nvim_set_keymap('', 'x', '"_x', opts)
-vim.api.nvim_set_keymap('i','#', 'X#', opts)
-vim.api.nvim_set_keymap('i','<C-a>', '<C-o>^', opts)
-vim.api.nvim_set_keymap('i','<C-e>', '<C-o>$', opts)
-vim.api.nvim_set_keymap('i','<C-b>', '<C-o>b', opts)
-vim.api.nvim_set_keymap('i','<C-f>', '<C-o>w', opts)
-opt.grepprg = "ag --nogroup --nocolor"
