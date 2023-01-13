@@ -58,7 +58,7 @@ vim.g.mapleader = ","
 
 vim.keymap.set('n', '<leader>1', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader><space>', ':noh<CR>')
-vim.keymap.set('n', '<leader>b', function() require('telescope.builtin').oldfiles({previewer = false}) end)
+vim.keymap.set('n', '<leader>b', function() require('telescope.builtin').oldfiles({include_current_session = true, previewer = false}) end)
 vim.keymap.set('n', '<leader>B', ':ToggleBlameLine<CR>')
 vim.keymap.set('n', '<leader>T', function() require('telescope.builtin').git_files({previewer = false}) end)
 vim.keymap.set('n', '<leader>f', ':Ack ')
