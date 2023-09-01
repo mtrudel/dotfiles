@@ -7,4 +7,5 @@
   "plenary.nvim": { "branch": "master", "commit": "0dbe561ae023f02c2fb772b879e905055b939ce3" },
   "solarized.nvim": { "branch": "main", "commit": "67f9d36e8de76846a7f0c4afd82d7690087b1988" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "776b509f80dd49d8205b9b0d94485568236d1192" },
+  "undotree": { "branch": "main", "commit": "2685ce282702ab0b79c65916f352db2265b245dd" }
 }
