@@ -35,7 +35,7 @@
 * If you wish to use a dark theme, you can easily do so by:
     1. Updating your terminal program to use Solarized Dark
     2. Change the `vim.opt.background` property to `dark` in
-       `nvim/config/lua/mtrudel/set.lua`
+       `nvim/config/lua/plugins/solarized.lua`
 
 ## Private Config Files
 

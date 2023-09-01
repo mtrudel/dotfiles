@@ -1,4 +1,3 @@
-vim.opt.background = 'light'
 vim.opt.backup = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.colorcolumn = { 80, 98 }
