@@ -13,6 +13,9 @@
 * Your terminal program should be set to use the Solarized Light color scheme
   color scheme (details on how to use Solarized Dark are in the 'Customization'
   section below)
+* You'll want to install (and have your terminal configured to use) a patched
+  font from the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+  collection. I personally like MesloLGSDZ
 * Don't worry about installing the Xcode Command Line Tools; brew will take care
   of that
 
