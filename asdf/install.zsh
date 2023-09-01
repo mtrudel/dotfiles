@@ -3,7 +3,7 @@
 brew install -q coreutils git
 
 # Install asdf if it's not already installed
-if ! command -v asdf &> /dev/null; then
+if [[ ! -d ~/.asdf ]]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
   . ~/.asdf/asdf.sh
 fi
