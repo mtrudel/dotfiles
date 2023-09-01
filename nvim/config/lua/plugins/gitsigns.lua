@@ -7,6 +7,7 @@ return { {
     },
     current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - (<abbrev_sha>) <summary>',
   },
+  event = { 'BufReadPre' },
   keys = {
     { '<leader>B', function() require('gitsigns').toggle_current_line_blame() end },
   },
