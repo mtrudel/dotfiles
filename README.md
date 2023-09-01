@@ -5,9 +5,11 @@
 1. Clone this repo to your machine (forking first if that's something you're
    interested in)
 
-2. To install a complete CLI environment, run `./install.zsh` inside the checked out repo.
+2. To install a complete CLI environment, run `./install.zsh` inside the checked
+   out repo.
 
-4. If you wish to install GUI apps (as specified in `gui/install.zsh`), run `./install.zsh gui` inside the checked out repo.
+3. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
+   `./install.zsh gui` inside the checked out repo.
 
 ## Private Config Files
 
@@ -25,7 +27,7 @@ which is automatically included in the main `gitconfig` file.
 
 ### SSH 
 
-You can add private git configuration information to `ssh/config.private`,
+You can add private git configuration information to `~/.ssh/config.private`,
 which is automatically included in the main `gitconfig` file. Additionally, any
 other files within the `ssh` directory other than `ssh/config` are not managed
 by this repo. This means that your keys, authorized hosts file and other SSH
