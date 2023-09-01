@@ -6,7 +6,7 @@ return { {
     defaults = {
       layout_strategy = 'vertical',
       layout_config = {
-        vertical = { width = 0.75, height = 0.9, preview_height = 0.75 },
+        vertical = { width = 0.75, height = 0.9, preview_height = 0.6 },
       },
     },
   },
