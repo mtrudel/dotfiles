@@ -4,12 +4,16 @@
 
 1. Clone this repo to your machine (forking first if that's something you're
    interested in)
-
 2. To install a complete CLI environment, run `./install.zsh` inside the checked
-   out repo.
+   out repo. This installs the `zsh`, `ssh`, `brew`, `nvim`, `git`, `tools` and
+   `asdf` plugins, which comprise a complete terminal environment ready for
+   extension via brew or asdf
+3. There are a number of other plugins for various languages and tools,
+   including `elixir` and `ruby`. You can install these by running
+   `./install.zsh <plugin>` inside the checked out repo
+4. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
+   `./install.zsh gui` inside the checked out repo
 
-3. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
-   `./install.zsh gui` inside the checked out repo.
 
 ## Private Config Files
 
