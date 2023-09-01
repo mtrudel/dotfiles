@@ -1,5 +1,21 @@
 # Mat's dotfiles
 
+## Prerequisites
+
+* A recent-ish install of macOS (Catalina or newer should be fine)
+* You will need zsh to be set as your default shell. This has been the case
+  since Catalina, but if you've been upgrading the same install since the stone
+  age you may need to [manually update](https://support.apple.com/en-ca/HT208050) this
+* You'll need to use [iTerm](https://iterm2.com) or some other terminal that supports
+  [truecolor](https://github.com//termstandard/colors) (Apple's built-in
+  Terminal.app does not). Note that if you use this project's `gui` plugin it
+  will install & manage iTerm for you
+* Your terminal program should be set to use the Solarized Light color scheme
+  color scheme (details on how to use Solarized Dark are in the 'Customization'
+  section below)
+* Don't worry about installing the Xcode Command Line Tools; brew will take care
+  of that
+
 ## Installation
 
 1. Clone this repo to your machine (forking first if that's something you're
@@ -14,6 +30,12 @@
 4. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
    `./install.zsh gui` inside the checked out repo
 
+## Customization
+
+* If you wish to use a dark theme, you can easily do so by:
+    1. Updating your terminal program to use Solarized Dark
+    2. Change the `vim.opt.background` property to `dark` in
+       `nvim/config/lua/mtrudel/set.lua`
 
 ## Private Config Files
 
