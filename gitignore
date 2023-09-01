@@ -1,8 +1,0 @@
-# OS X Cruftery
-.DS_Store
-Icon?
-._*
-.Spotlight-V100
-.Trashes
-**/.elixir_ls/*
-.env
