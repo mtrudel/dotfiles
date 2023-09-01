@@ -3,10 +3,15 @@
 brew install -q git hub
 
 # Copy over zshrc.d contents
-ln -fns ${0:A:h}/zshrc.d/* ~/.zshrc.d/
+for i in ${0:A:h}/zshrc.d/*; do
+  [[ ~/.zshrc.d/${i:t} -ef ${i} ]] || ([[ -f ~/.zshrc.d/${i:t} ]] && mv ~/.zshrc.d/${i:t}{,.bak})
+  ln -fns ${i} ~/.zshrc.d/${i:t}
+done
 
 # Copy over config
+[[ ~/.gitconfig -ef ${0:A:h}/gitconfig ]] || ([[ -f ~/.gitconfig ]] && mv ~/.gitconfig{,.bak})
 ln -fns ${0:A:h}/gitconfig ~/.gitconfig
+[[ ~/.gitignore -ef ${0:A:h}/gitignore ]] || ([[ -f ~/.gitignore ]] && mv ~/.gitignore{,.bak})
 ln -fns ${0:A:h}/gitignore ~/.gitignore
 
 if ! git config --get user.name > /dev/null; then

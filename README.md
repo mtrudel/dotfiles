@@ -2,9 +2,6 @@
 
 ## Prerequisites
 
-* **IMPORTANT** The current version of the installer in this repo will clobber
-  any existing configuration files you may have. This is being fixed but for the
-  time being, caveat emptor!
 * A recent-ish install of macOS (Catalina or newer should be fine)
 * You will need zsh to be set as your default shell. This has been the case
   since Catalina, but if you've been upgrading the same install since the stone

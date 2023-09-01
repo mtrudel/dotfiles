@@ -1,7 +1,10 @@
 #!/bin/zsh
 
-# Copy over config
+# Ensure that ~/.ssh/ exists with the correct permissions
 mkdir -m 700 -p ~/.ssh
+
+# Copy over config
+[[ ~/.ssh/config -ef ${0:A:h}/config ]] || ([[ -f ~/.ssh/config ]] && mv ~/.ssh/config{,.bak})
 ln -fns ${0:A:h}/config ~/.ssh/
 
 if ! ssh-add --apple-use-keychain; then
