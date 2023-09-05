@@ -4,5 +4,7 @@ return { {
   main = 'nvim-treesitter.configs',
   opts = {
     ensure_installed = 'all',
+    highlight = { enable = true },
+    indent = { enable = true },  
   },
 } }
