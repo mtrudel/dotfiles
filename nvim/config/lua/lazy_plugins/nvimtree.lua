@@ -20,6 +20,6 @@ return { {
   end,
   keys = {
     { '<leader>1', vim.cmd.NvimTreeToggle },
-    { '<leader>j', vim.cmd.NvimTreeFindFileToggle },
+    { '<leader>j', vim.cmd.NvimTreeFindFile },
   },
 } }
