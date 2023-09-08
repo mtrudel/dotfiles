@@ -11,7 +11,7 @@ return { {
       },
       highlights = function(colors)
         return {
-          TelescopeMatching = { fg = colors.red },
+          TelescopeMatching = { fg = colors.base3, },
         }
       end
     })
