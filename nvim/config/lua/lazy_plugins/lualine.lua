@@ -2,6 +2,7 @@ return { {
   'nvim-lualine/lualine.nvim',
   opts = {
     options = {
+      globalstatus = 3,
       component_separators = '|',
       section_separators = { left = '', right = '' },
     },
@@ -13,6 +14,6 @@ return { {
       lualine_y = { 'progress' },
       lualine_z = { 'location' }
     },
-    extensions = { 'nvim-tree' },
+    disabled_filetypes = { 'nvim-tree' },
   },
 } }
