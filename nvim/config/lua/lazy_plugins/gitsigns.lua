@@ -10,5 +10,7 @@ return { {
   event = { 'BufReadPre' },
   keys = {
     { '<leader>B', function() require('gitsigns').toggle_current_line_blame() end },
+    { ']c',        function() require('gitsigns').next_hunk() end },
+    { '[c',        function() require('gitsigns').prev_hunk() end },
   },
 } }
