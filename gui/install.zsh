@@ -8,6 +8,9 @@ for i in ${0:A:h}/zshrc.d/*; do
   ln -fns ${i} ~/.zshrc.d/${i:t}
 done
 
+# Add /etc/pam.d/sudo_local if it doesn't already exist
+[[ -f /etc/pam.d/sudo_local ]] || (echo 'auth       sufficient     pam_tid.so' | sudo tee /etc/pam.d/sudo_local)
+
 # Feel free to edit from here down
 
 brew install -q qlstephen
