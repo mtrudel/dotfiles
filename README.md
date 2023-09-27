@@ -15,7 +15,8 @@
   section below)
 * You'll want to install (and have your terminal configured to use) a patched
   font from the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
-  collection. I personally like MesloLGSDZ
+  collection. Note that if you use this project's `gui` plugin` it will install
+  the meslo-nerd-font family for you. I personally like MesloLGSDZ
 * Don't worry about installing the Xcode Command Line Tools; brew will take care
   of that
 
@@ -49,12 +50,12 @@ The included `~/.zshrc` file includes all files in `~/.zshrc.d`. The
 as needed), so any other files you put in there are not managed as part of this
 dotfiles project.
 
-### Git 
+### Git
 
 You can add private git configuration information to `~/.gitconfig.private`,
 which is automatically included in the main `gitconfig` file.
 
-### SSH 
+### SSH
 
 You can add private git configuration information to `~/.ssh/config.private`,
 which is automatically included in the main `gitconfig` file. Additionally, any
