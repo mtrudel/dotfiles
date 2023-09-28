@@ -77,3 +77,8 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 defaults write com.knollsoft.Rectangle almostMaximizeWidth -float 0.6
 defaults write com.knollsoft.Rectangle almostMaximizeHeight -float 1.0
+
+# These will wire up the plist file in this folder into iTerm
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder true
+defaults write com.googlecode.iterm2 PrefsCustomFolder "${0:A:h}"
+defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile_selection 2
