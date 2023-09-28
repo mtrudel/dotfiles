@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 brew tap homebrew/core
-brew install -q autoconf automake libtool wxmac
+brew install -q autoconf automake libtool wxmac openssl
 
 # Copy over zshrc.d contents
 for i in ${0:A:h}/zshrc.d/*; do
