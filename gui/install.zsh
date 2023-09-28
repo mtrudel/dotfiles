@@ -17,6 +17,10 @@ brew install -q qlstephen
 brew install -q qlmarkdown
 brew install -q switchaudio-osx
 
+# These are necessary to enable the Quicklook plugins above
+xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
+xattr -cr /Applications/QLMarkdown.app
+
 brew install -q --cask 1password
 brew install -q --cask alfred
 brew install -q --cask deckset
