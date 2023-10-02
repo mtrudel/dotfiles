@@ -9,11 +9,6 @@ return { {
         keywords = { bold = false },
         functions = { bold = false },
       },
-      highlights = function(colors)
-        return {
-          TelescopeMatching = { fg = colors.base3, },
-        }
-      end
     })
 
     vim.o.background = 'light'
