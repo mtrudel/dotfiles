@@ -29,7 +29,7 @@
    `asdf` plugins, which comprise a complete terminal environment ready for
    extension via brew or asdf
 3. There are a number of other plugins for various languages and tools,
-   including `elixir` and `ruby`. You can install these by running
+   including `elixir`, `ruby` and `nodejs`. You can install these by running
    `./install.zsh <plugin>` inside the checked out repo
 4. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
    `./install.zsh gui` inside the checked out repo
