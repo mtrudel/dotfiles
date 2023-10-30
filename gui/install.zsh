@@ -41,7 +41,9 @@ brew install -q --cask visual-studio-code
 brew install -q --cask zoom
 
 brew tap homebrew/cask-fonts
-font-meslo-lg-nerd-font
+brew install -q font-meslo-lg-nerd-font
+brew install -q font-hubot-sans
+brew install -q font-mona-sans
 
 mas install 1569813296 # 1Password Safari Extension
 mas install 1018301773 # Adblock Pro
