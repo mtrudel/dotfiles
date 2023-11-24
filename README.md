@@ -2,10 +2,13 @@
 
 ## Prerequisites
 
-* A recent-ish install of macOS (Catalina or newer should be fine)
-* You will need zsh to be set as your default shell. This has been the case
+* A recent-ish install of macOS (Catalina or newer should be fine) or an
+  apt-based Linux distro
+* You will need zsh to be set as your default shell. On macOS this has been the case
   since Catalina, but if you've been upgrading the same install since the stone
-  age you may need to [manually update](https://support.apple.com/en-ca/HT208050) this
+  age you may need to [manually update](https://support.apple.com/en-ca/HT208050) this.
+  Linux folks will want to do something like `sudo apt-get install zsh && chsh
+  -s /usr/bin/zsh`
 * You'll need to use [iTerm](https://iterm2.com) or some other terminal that supports
   [truecolor](https://github.com//termstandard/colors) (Apple's built-in
   Terminal.app does not). Note that if you use this project's `gui` plugin it
@@ -20,7 +23,7 @@
 * Don't worry about installing the Xcode Command Line Tools; brew will take care
   of that
 
-## Installation
+## Installation (macOS)
 
 1. Clone this repo to your machine (forking first if that's something you're
    interested in)
@@ -33,6 +36,16 @@
    `./install.zsh <plugin>` inside the checked out repo
 4. If you wish to install GUI apps (as specified in `gui/install.zsh`), run
    `./install.zsh gui` inside the checked out repo
+
+## Installation (Linux)
+
+Only `zsh`, `ssh`, `snap`, `nvim` and `git` have support for Linux (and even then it's
+pretty patchy).
+
+1. Clone this repo to your machine (forking first if that's something you're
+   interested in)
+2. To install a complete CLI environment, run `./install.zsh zsh ssh snap nvim
+   git` inside the checked out repo.
 
 ## Customization
 

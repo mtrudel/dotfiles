@@ -1,12 +1,14 @@
 #!/bin/zsh
 
 # Install nvim if it's not already installed. Do this as a separate step in case the user has nvim
-# installed separate from brew
+# installed separate from brew / snap
 if ! command -v nvim &> /dev/null; then
-  brew install -q neovim
+  command -v brew &> /dev/null && brew install -q neovim
+  command -v snap &> /dev/null && sudo snap install --classic nvim
 fi
 
-brew install -q ripgrep
+command -v brew &> /dev/null && brew install -q ripgrep
+command -v apt-get &> /dev/null && sudo apt-get install ripgrep
 
 # Copy over zshrc.d contents
 for i in ${0:A:h}/zshrc.d/*; do

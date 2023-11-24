@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-brew install -q git hub
+command -v brew &> /dev/null && brew install -q git hub
 
 # Copy over zshrc.d contents
 for i in ${0:A:h}/zshrc.d/*; do

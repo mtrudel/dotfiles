@@ -7,6 +7,6 @@ mkdir -m 700 -p ~/.ssh
 [[ ~/.ssh/config -ef ${0:A:h}/config ]] || ([[ -f ~/.ssh/config ]] && mv ~/.ssh/config{,.bak})
 ln -fns ${0:A:h}/config ~/.ssh/
 
-if ! ssh-add --apple-use-keychain; then
+if command -v ssh-add &> /dev/null && ! ssh-add --apple-use-keychain; then
   echo "No ssh key present! Add one via: 'ssh-keygen -t ed25519 -C <your_email@example.com>'"
 fi
