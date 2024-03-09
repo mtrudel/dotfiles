@@ -610,7 +610,7 @@
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -710,6 +710,10 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>QuickPasteBytesPerCall</key>
+	<integer>506</integer>
+	<key>QuickPasteDelayBetweenCalls</key>
+	<real>0.015151514671742916</real>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
