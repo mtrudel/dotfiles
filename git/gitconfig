@@ -3,14 +3,12 @@
   ci = commit
   co = checkout
   br = branch
-  ca = commit -av 
-  mg = merge --no-ff
+  po = push origin -u
+  pof = push origin -uf
   lo = log --graph
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   amend = commit --amend
   tinylog = log --format=oneline --abbrev-commit
-  track = checkout -t 
-  fixup = rebase -i --autosquash --autostash
   shortref = rev-parse --short HEAD
 [color]
   branch = auto
