@@ -8,6 +8,12 @@ return { {
       layout_config = {
         vertical = { width = 0.75, height = 0.9, preview_height = 0.6 },
       },
+      mappings = {
+        i = {
+          ["<S-Down>"] = function(...) require("telescope.actions").cycle_history_next(...) end,
+          ["<S-Up>"] = function(...) require("telescope.actions").cycle_history_prev(...) end,
+        },
+      },
     },
   },
   keys = {
