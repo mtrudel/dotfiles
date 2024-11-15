@@ -1,5 +1,6 @@
 return { {
   'maxmx03/solarized.nvim',
+  tag = "v3.0.0",
   lazy = false,
   priority = 1000,
   config = function()
