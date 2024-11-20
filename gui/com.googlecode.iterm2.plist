@@ -647,6 +647,8 @@
 			<string></string>
 			<key>Show Mark Indicators</key>
 			<false/>
+			<key>Show Offscreen Command line</key>
+			<false/>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Sync Title</key>
@@ -659,6 +661,8 @@
 			<integer>3</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Treat Option as Alt</key>
+			<false/>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
