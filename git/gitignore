@@ -6,3 +6,4 @@ Icon?
 .Trashes
 **/.elixir_ls/*
 .env
+TODO.md

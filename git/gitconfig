@@ -50,3 +50,9 @@
   rebase = false
 [init]
   defaultBranch = main
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
