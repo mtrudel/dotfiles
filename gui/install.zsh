@@ -31,6 +31,7 @@ brew install -q --cask google-chrome
 brew install -q --cask iterm2
 brew install -q --cask kicad
 brew install -q --cask mist
+brew install -q --cask numi
 brew install -q --cask qcad
 brew install -q --cask rectangle
 brew install -q --cask slack
