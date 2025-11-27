@@ -1,10 +1,8 @@
-require('lspconfig').elixirls.setup({
-  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+vim.lsp.config('expert', {
   on_attach = require('mtrudel/helpers/lsp').on_attach,
-  settings = {
-    elixirLS = {
-      dialyzerEnabled = false,
-      fetchDeps = false,
-    },
-  },
+  cmd = { 'expert', '--stdio' },
+  root_markers = { 'mix.exs', '.git' },
+  filetypes = { 'elixir', 'eelixir', 'heex' },
 })
+
+vim.lsp.enable 'expert'

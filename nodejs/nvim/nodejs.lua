@@ -1,4 +1,4 @@
-require('lspconfig').eslint.setup({
+vim.lsp.config('eslint', {
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
   on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = true
@@ -8,3 +8,5 @@ require('lspconfig').eslint.setup({
   end
 
 })
+
+vim.lsp.enable('eslint')
