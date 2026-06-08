@@ -7,3 +7,4 @@ Icon?
 **/.elixir_ls/*
 .env
 TODO.md
+/.claude/

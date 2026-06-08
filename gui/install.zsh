@@ -9,13 +9,18 @@ for i in ${0:A:h}/zshrc.d/*; do
 done
 
 # Add /etc/pam.d/sudo_local if it doesn't already exist
-[[ -f /etc/pam.d/sudo_local ]] || (echo 'auth       sufficient     pam_tid.so' | sudo tee /etc/pam.d/sudo_local)
+# This isn't necessary in newer macos
+# [[ -f /etc/pam.d/sudo_local ]] || (echo 'auth       sufficient     pam_tid.so' | sudo tee /etc/pam.d/sudo_local)
 
 # Feel free to edit from here down
 
+brew install -q colima
+brew install -q music-decoy
 brew install -q qlstephen
 brew install -q qlmarkdown
 brew install -q switchaudio-osx
+
+defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
 
 # These are necessary to enable the Quicklook plugins above
 xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
@@ -23,21 +28,17 @@ xattr -cr /Applications/QLMarkdown.app
 
 brew install -q --cask 1password
 brew install -q --cask alfred
-brew install -q --cask deckset
-brew install -q --cask displaperture
-brew install -q --cask docker
 brew install -q --cask gitup
 brew install -q --cask google-chrome
+brew install -q --cask grandperspective
 brew install -q --cask iterm2
 brew install -q --cask kicad
 brew install -q --cask mist
-brew install -q --cask numi
 brew install -q --cask qcad
 brew install -q --cask rectangle
 brew install -q --cask slack
 brew install -q --cask spotify
 brew install -q --cask superduper
-brew install -q --cask tableplus
 brew install -q --cask visual-studio-code
 brew install -q --cask zoom
 
@@ -47,8 +48,7 @@ brew install -q font-hubot-sans
 brew install -q font-mona-sans
 
 mas install 1569813296 # 1Password Safari Extension
-mas install 1018301773 # Adblock Pro
-mas install 1544743900 # Hush
+mas install 6745342698 # uBlock Origin Lite
 mas install 409203825 # Numbers
 mas install 409201541 # Pages
 mas install 409183694 # Keynote
