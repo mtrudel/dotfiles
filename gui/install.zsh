@@ -13,13 +13,9 @@ done
 
 # Feel free to edit from here down
 
-brew install -q colima
-brew install -q music-decoy
 brew install -q qlstephen
 brew install -q qlmarkdown
 brew install -q switchaudio-osx
-
-defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
 
 # These are necessary to enable the Quicklook plugins above
 xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
@@ -33,6 +29,7 @@ brew install -q --cask grandperspective
 brew install -q --cask iterm2
 brew install -q --cask kicad
 brew install -q --cask mist
+brew install -q --cask music-decoy
 brew install -q --cask qcad
 brew install -q --cask rectangle
 brew install -q --cask slack
@@ -40,6 +37,8 @@ brew install -q --cask spotify
 brew install -q --cask superduper
 brew install -q --cask visual-studio-code
 brew install -q --cask zoom
+
+defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
 
 brew tap homebrew/cask-fonts
 brew install -q font-meslo-lg-nerd-font
