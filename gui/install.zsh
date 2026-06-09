@@ -9,8 +9,7 @@ for i in ${0:A:h}/zshrc.d/*; do
 done
 
 # Add /etc/pam.d/sudo_local if it doesn't already exist
-# This isn't necessary in newer macos
-# [[ -f /etc/pam.d/sudo_local ]] || (echo 'auth       sufficient     pam_tid.so' | sudo tee /etc/pam.d/sudo_local)
+[[ -f /etc/pam.d/sudo_local ]] || (echo 'auth       sufficient     pam_tid.so' | sudo tee /etc/pam.d/sudo_local)
 
 # Feel free to edit from here down
 
