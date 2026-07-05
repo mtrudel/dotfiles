@@ -1,6 +1,6 @@
 return { {
   'nvim-treesitter/nvim-treesitter',
-  main = 'nvim-treesitter.configs',
+  main = 'nvim-treesitter',
   opts = {
     auto_install = true,
     highlight = { enable = true },
