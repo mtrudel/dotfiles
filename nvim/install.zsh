@@ -5,10 +5,12 @@
 if ! command -v nvim &> /dev/null; then
   command -v brew &> /dev/null && brew install -q neovim
   command -v snap &> /dev/null && sudo snap install --classic nvim
+  command -v pacman &> /dev/null && sudo pacman -S neovim
 fi
 
 command -v brew &> /dev/null && brew install -q ripgrep
 command -v apt-get &> /dev/null && sudo apt-get install ripgrep
+command -v pacman &> /dev/null && sudo pacman -S ripgrep
 
 # Copy over zshrc.d contents
 for i in ${0:A:h}/zshrc.d/*; do

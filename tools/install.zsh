@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-brew install -q ack
-brew install -q colima
+command -v brew &> /dev/null && brew install -q ack
+command -v brew &> /dev/null && brew install -q colima

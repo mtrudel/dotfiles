@@ -3,12 +3,11 @@
 ## Prerequisites
 
 * A recent-ish install of macOS (Catalina or newer should be fine) or an
-  apt-based Linux distro
+  pacman or apt-based Linux distro
 * You will need zsh to be set as your default shell. On macOS this has been the case
   since Catalina, but if you've been upgrading the same install since the stone
   age you may need to [manually update](https://support.apple.com/en-ca/HT208050) this.
-  Linux folks will want to do something like `sudo apt-get install zsh && chsh
-  -s /usr/bin/zsh`
+  Linux folks will want to use something like `chsh` to change your shell
 * You'll need to use [iTerm](https://iterm2.com) or some other terminal that supports
   [truecolor](https://github.com//termstandard/colors) (Apple's built-in
   Terminal.app does not). Note that if you use this project's `gui` plugin it
