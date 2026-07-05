@@ -1,8 +1,9 @@
 Include ~/.ssh/config.private
 
+IgnoreUnknown UseKeychain
+
 Host *
 UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 60
 IdentityFile ~/.ssh/id_rsa
-
