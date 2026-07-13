@@ -19,5 +19,5 @@ asdf plugin add elixir
 asdf install erlang latest
 asdf install elixir latest
 
-asdf global erlang latest
-asdf global elixir latest
+asdf set -u erlang latest
+asdf set -u elixir latest
