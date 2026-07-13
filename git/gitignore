@@ -7,4 +7,4 @@ Icon?
 **/.elixir_ls/*
 .env
 TODO.md
-/.claude/
+.claude/settings.local.json
