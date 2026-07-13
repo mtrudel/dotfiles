@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
 if [ -d ~/.zshrc.d ]; then
   for i in ~/.zshrc.d/*; do . $i; done
 fi
+# zprof
