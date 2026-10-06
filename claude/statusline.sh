@@ -89,10 +89,10 @@ meter "$CTX" 50 90 " $(bar "$CTX") ${CTX}% "
 
 # 5. 5-hour limit, 6. 7-day limit (omitted when Claude Code does not send them)
 if [ "$FH" != "-" ]; then
-  p=$(printf '%.0f' "$FH"); meter "$p" 75 90 " $I_CLOCK 5h ${p}% $(left "$FHR") "
+  p=$(printf '%.0f' "$FH"); meter "$p" 100 90 " $I_CLOCK 5h ${p}% $(left "$FHR") "
 fi
 if [ "$WK" != "-" ]; then
-  p=$(printf '%.0f' "$WK"); meter "$p" 75 90 " $I_CAL 7d ${p}% $(left "$WKR") "
+  p=$(printf '%.0f' "$WK"); meter "$p" 100 90 " $I_CAL 7d ${p}% $(left "$WKR") "
 fi
 
 # 7. session $
