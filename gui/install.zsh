@@ -50,6 +50,21 @@ brew install -q font-mona-sans
 # 1Password Safari Extension
 mas install 1569813296
 
+# uBlock Origin Lite
+mas install 6745342698
+
+# Numbers
+mas install 361304891
+
+# Pages
+mas install 361309726
+
+# Keynote
+mas install 361285480
+
+# XCode
+#mas install 497799835
+
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 defaults write com.apple.finder DisableAllAnimations -bool true
