@@ -21,9 +21,11 @@ brew install -q switchaudio-osx
 xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
 xattr -cr /Applications/QLMarkdown.app
 
-brew install -q --cask 1password
 brew install -q --cask alfred
 brew install -q --cask gitup
+
+# Common home set
+brew install -q --cask 1password
 brew install -q --cask google-chrome
 brew install -q --cask grandperspective
 brew install -q --cask iterm2
@@ -35,8 +37,14 @@ brew install -q --cask rectangle
 brew install -q --cask slack
 brew install -q --cask spotify
 brew install -q --cask superduper
+
+# Common work set
+brew install -q --cask iterm2
+brew install -q --cask obsidian
+brew install -q --cask postman
+brew install -q --cask sequel-ace
+brew install -q --cask spotify
 brew install -q --cask visual-studio-code
-brew install -q --cask zoom
 
 defaults write com.lowtechguys.MusicDecoy mediaAppPath /Applications/Spotify.app
 
@@ -46,6 +54,8 @@ brew install -q font-hubot-sans
 brew install -q font-mona-sans
 
 mas install 1569813296 # 1Password Safari Extension
+
+# Home set
 mas install 6745342698 # uBlock Origin Lite
 mas install 409203825 # Numbers
 mas install 409201541 # Pages
