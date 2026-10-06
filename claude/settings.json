@@ -1,16 +1,17 @@
 {
-  "model": "default",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "awaySummaryEnabled": false,
-  "tui": "fullscreen",
-  "theme": "auto",
   "feedbackDrafts": "off",
+  "spinnerTipsEnabled": false,
   "spinnerVerbs": {
     "mode": "replace",
-    "verbs": ["Working"]
+    "verbs": [
+      "Working"
+    ]
   },
-  "spinnerTipsEnabled": false
+  "awaySummaryEnabled": false,
+  "tui": "fullscreen",
+  "theme": "auto"
 }
