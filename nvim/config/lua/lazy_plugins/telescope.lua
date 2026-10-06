@@ -8,6 +8,7 @@ return { {
       layout_config = {
         vertical = { width = 0.75, height = 0.9, preview_height = 0.6 },
       },
+      preview = { treesitter = false },
       mappings = {
         i = {
           ["<S-Down>"] = function(...) require("telescope.actions").cycle_history_next(...) end,

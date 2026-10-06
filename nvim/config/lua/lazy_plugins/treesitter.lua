@@ -4,9 +4,15 @@ return { {
   build = ':TSUpdate',
   main = 'nvim-treesitter',
   opts = {
-    auto_install = true,
     ensure_installed = { 'c', 'query', 'vim', 'vimdoc' },
-    highlight = { enable = true },
-    indent = { enable = true },
   },
+  config = function(_, opts)
+    require('nvim-treesitter').setup(opts)
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function(ev)
+        pcall(vim.treesitter.start, ev.buf)
+        vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      end,
+    })
+  end,
 } }
